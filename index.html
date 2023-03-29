@@ -1,15 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="authors" content="Miguel Louis, Yizhuang Lin, Linux Li, Mohammad El Ghali ">
-    <meta name="emails" content="loui0064@algonquinlive.com, ">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="authors"
+      content="Miguel Louis, Yizhuang Lin, Linux Li, Mohammad El Ghali "
+    />
+    <meta name="emails" content="loui0064@algonquinlive.com, " />
+    <link rel="stylesheet" href="styles.css" />
     <title>FlowMastery</title>
-</head>
-<body>
-    <script src="script.js"></script>
-</body>
+  </head>
+  <body>
+    <header>
+        <div>
+            <img src="Logo.png" alt="Logo">
+            <span>Flow Mastery</span>
+        </div>
+        <div id="weather-widget">Ottawa: 23°C</div>
+    </header>
+    <div id="music-browser">MusicPlayer---The Star-Spangled Banner</div>
+    <div class="main-container">
+        <div class="timer-container">
+            <div class="timer-buttons">
+                <button class="timer-button">Pomodoro</button>
+                <button class="timer-button">Rest</button>
+                <button class="timer-button">Long Rest</button>
+            </div>
+            <br/><br/><br/><br/><br/><br/><br/><br/>
+            <div id="timer-display">25:00</div>
+            <br/><br/><br/><br/><br/><br/><br/><br/>
+            <div class="timer-controls">
+                <button class="timer-control">Start</button>
+                <button class="timer-control">Restart</button>
+            </div>
+            <br/><br/><br/><br/>
+            <div class="recommendations">
+                <span>Recommendations: </span>
+                <button class="recommendation-button">Calculator</button>
+                <button class="recommendation-button">Notes</button>
+                <button class="recommendation-button">+Tools</button>
+                <button class="recommendation-button">+Tools</button>
+            </div>
+        </div>
+        <div id="todo-list">
+            <div class="list-section">
+                <h3>Today's Task</h3>
+                <div class="list-item">
+                    <input type="checkbox">
+                    <span>lab1</span>
+                    <button>&times;</button>
+                </div>
+            </div>
+            <div class="list-section">
+                <h3>To be completed</h3>
+                <div class="list-item">
+                    <input type="checkbox">
+                    <span>lab2</span>
+                    <button>&times;</button>
+                </div>
+            </div>
+            <div class="list-section">
+                <h3>Completed</h3>
+                <div class="list-item">
+                    <input type="checkbox">
+                    <span>lab3</span>
+                    <button>&times;</button>
+                </div>
+            </div>
+            <div class="list-section">
+                <h3>Deadline</h3>
+                <div class="list-item">
+                    <input type="checkbox">
+                    <span>lab4</span>
+                    <button>&times;</button>
+                </div>
+            </div>
+            <div class="list-section">
+                <h3>Tomorrow</h3>
+                <div class="list-item">
+                    <input type="checkbox">
+                    <span>lab5</span>
+                    <button>&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </html>
