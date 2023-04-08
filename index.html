@@ -7,84 +7,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="authors" content="Miguel Louis, Yizhuang Lin, Linux Li, Mohammad El Ghali " />
     <meta name="emails" content="loui0064@algonquinlive.com, " />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Lato&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>FlowMastery</title>
 </head>
 
 <body>
-    <header>
-        <div>
-            <img src="Logo.png" alt="Logo">
-            <span>Flow Mastery</span>
-        </div>
-        <div id="weather-widget">Ottawa: 23°C</div>
-    </header>
-    <div id="music-browser">MusicPlayer---The Star-Spangled Banner</div>
-    <div class="main-container">
-        <div class="timer-container">
-            <div class="timer-buttons">
-                <button class="timer-button">Pomodoro</button>
-                <button class="timer-button">Rest</button>
-                <button class="timer-button">Long Rest</button>
+    <div class="container">
+
+        <nav>
+            <div>
+                <img src="./images/FlowMasteryLogo.svg" alt="Logo">
             </div>
-            <br /><br /><br /><br /><br /><br /><br /><br />
-            <div id="timer-display">25:00</div>
-            <br /><br /><br /><br /><br /><br /><br /><br />
-            <div class="timer-controls">
-                <button class="timer-control">Start</button>
-                <button class="timer-control">Restart</button>
+            <div class="dark-mode__container">
+                <input type="checkbox" id="dark-mode-btn" />
+                <label for="dark-mode-btn"></label>
             </div>
-            <br /><br /><br /><br />
-            <div class="recommendations">
-                <span>Recommendations: </span>
-                <button class="recommendation-button">Calculator</button>
-                <button class="recommendation-button">Notes</button>
-                <button class="recommendation-button">+Tools</button>
-                <button class="recommendation-button">+Tools</button>
+        </nav>
+        <header>
+            <div class="header">
+                <div>
+                    <h1>Welcome back, Einstein.</h1>
+                </div>
+                <div id="weather-widget">Ottawa: 23°C</div>
             </div>
-        </div>
-        <div id="todo-list">
-            <div class="list-section">
-                <h3>Today's Task</h3>
-                <div class="list-item">
-                    <input type="checkbox">
-                    <span>lab1</span>
-                    <button>&times;</button>
+        </header>
+
+        <!--<div id="music-browser">MusicPlayer---The Star-Spangled Banner</div>-->
+        <div class="main-container">
+            <div class="left__container">
+                <!-- POMO TIMMER -->
+                <div class="timer__container">
+                    <div class="timer-buttons">
+                        <button class="btn__timer">Pomodoro</button>
+                        <button class="btn__timer">Rest</button>
+                        <button class="btn__timer">Long Rest</button>
+                    </div>
+                    <br /><br /><br /><br /><br /><br /><br /><br />
+                    <div id="timer-display">25:00</div>
+                    <br /><br /><br /><br /><br /><br /><br /><br />
+                    <div class="timer-controls">
+                        <button class="btn__timer">Start</button>
+                        <button class="btn__timer">Restart</button>
+                    </div>
+                </div>
+                <!-- END POMO TIMER -->
+
+                <!-- CALCULATOR -->
+                <!--<div class="calculator">
+                    <input id="userInput" placeholder="0" />
+                    <br />
+                    <button class="btn" onclick="press(1)">1</button>
+                    <button class="btn" onclick="press(2)">2</button>
+                    <button class="btn" onclick="press(3)">3</button>
+                    <button class="btn" style="background: #ffb84d" onclick="press('+')">
+                        +
+                    </button>
+                    <br />
+                    <button class="btn" onclick="press(4)">4</button>
+                    <button class="btn" onclick="press(5)">5</button>
+                    <button class="btn" onclick="press(6)">6</button>
+                    <button class="btn" style="background: #ffcc80" onclick="press('-')">
+                        -
+                    </button>
+                    <br />
+                    <button class="btn" onclick="press(7)">7</button>
+                    <button class="btn" onclick="press(8)">8</button>
+                    <button class="btn" onclick="press(9)">9</button>
+                    <button class="btn" style="background: #ffe0b3" onclick="press('*')">
+                        *
+                    </button>
+                    <br />
+                    <button class="btn" onclick="press('.')">.</button>
+                    <button class="btn" onclick="press(0)">0</button>
+                    <button class="btn" onclick="erase()">C</button>
+                    <button class="btn" style="background: #fff5e6" onclick="press('/')">
+                        /
+                    </button>
+                    <br>
+                    <button class="btnEqual" onclick="equal()">=</button>
+                </div>-->
+                <!-- END CALCULATOR -->
+
+                <!-- NOTE PAD -->
+                <!--<div class="notepad__container">
+                    <h1>Notepad</h1>
+                    <textarea id="notepad"></textarea>
+                    <button class="notepad__btn" id="download">Download</button>
+                </div>-->
+
+                <!-- NOTE PAD END -->
+                <div class="tools">
+                    <h3>Tools:</h3>
+                    <div class="recommendations">
+                        <button class="btn__recommendation">Calculator</button>
+                        <button class="btn__recommendation">Notes</button>
+                        <button class="btn__recommendation">+Tools</button>
+                        <button class="btn__recommendation">+Tools</button>
+                    </div>
                 </div>
             </div>
-            <div class="list-section">
-                <h3>To be completed</h3>
-                <div class="list-item">
-                    <input type="checkbox">
-                    <span>lab2</span>
-                    <button>&times;</button>
+            <div class="right__container">
+                <div class="todo__container">
+                    <div class="todo__inner__container">
+                        <h1>Todo List</h1>
+                        <div id="newtask">
+                            <input type="text" placeholder="Enter Task">
+                            <button id="push">Add</button>
+                        </div>
+                        <div id="tasks"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="list-section">
-                <h3>Completed</h3>
-                <div class="list-item">
-                    <input type="checkbox">
-                    <span>lab3</span>
-                    <button>&times;</button>
-                </div>
-            </div>
-            <div class="list-section">
-                <h3>Deadline</h3>
-                <div class="list-item">
-                    <input type="checkbox">
-                    <span>lab4</span>
-                    <button>&times;</button>
-                </div>
-            </div>
-            <div class="list-section">
-                <h3>Tomorrow</h3>
-                <div class="list-item">
-                    <input type="checkbox">
-                    <span>lab5</span>
-                    <button>&times;</button>
+                <div class="todo__container">
+                    <div class="todo__inner__container">
+                        <h1>Deadlines</h1>
+                        <div id="new_deadline">
+                            <input type="text" placeholder="Enter Deadline">
+                            <button id="push_deadline">Add</button>
+                        </div>
+                        <div id="deadline"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./todo.js"></script>
+    <script src="./deadline.js"></script>
+    <script src="./calc.js"></script>
+    <script src="./notepad.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        const darkModeBtn = document.getElementById("dark-mode-btn");
+
+        darkModeBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            darkModeBtn.textContent = document.body.classList.contains("dark-mode") ? "Light mode" : "Dark mode";
+        });
+    </script>
 
 </html>
