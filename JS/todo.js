@@ -1,8 +1,16 @@
-document.querySelector('#push').onclick = function () {
+document.querySelector('#newtask input').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    addTask()
+  }
+})
+
+document.querySelector('#push').onclick = addTask
+
+function addTask() {
   if (document.querySelector('#newtask input').value.length == 0) {
     alert('Please Enter a Task')
   } else {
-    document.querySelector('#tasks').innerHTML += `
+    document.querySelector('.tasks').innerHTML += `
           <div class="task">
               <span id="taskname">
                   ${document.querySelector('#newtask input').value}
@@ -19,5 +27,7 @@ document.querySelector('#push').onclick = function () {
         this.parentNode.remove()
       }
     }
+
+    document.querySelector('#newtask input').value = '' // clears the input field after adding the task
   }
 }

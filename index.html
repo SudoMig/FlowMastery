@@ -42,65 +42,29 @@
             <div class="left__container">
                 <!-- POMO TIMMER -->
                 <div class="timer__container">
-                    <div class="timer-buttons">
-                        <button class="btn__timer">Pomodoro</button>
-                        <button class="btn__timer">Rest</button>
-                        <button class="btn__timer">Long Rest</button>
+                    <div class="timer__functions">
+                        <div>
+                            <button class="btn__timer" data-time="1500">Pomodoro</button>
+                            <button class="btn__timer" data-time="300">Rest</button>
+                            <button class="btn__timer" data-time="1800">Long Rest</button>
+                        </div>
+                        <div>
+                            <form name="customForm" id="custom">
+                                <input type="text" name="minutes" placeholder="Custom Time" />
+                            </form>
+                        </div>
+                        <div id="timer-display" class="display">
+                            <h1 class="display__time-left"></h1>
+                            <p class="display__end-time"></p>
+                        </div>
                     </div>
-                    <br /><br /><br /><br /><br /><br /><br /><br />
-                    <div id="timer-display">25:00</div>
-                    <br /><br /><br /><br /><br /><br /><br /><br />
                     <div class="timer-controls">
-                        <button class="btn__timer">Start</button>
+                        <button id="pauseResume" class="btn__timer">Pause</button>
                         <button class="btn__timer">Restart</button>
                     </div>
                 </div>
                 <!-- END POMO TIMER -->
 
-                <!-- CALCULATOR -->
-                <!--<div class="calculator">
-                    <input id="userInput" placeholder="0" />
-                    <br />
-                    <button class="btn" onclick="press(1)">1</button>
-                    <button class="btn" onclick="press(2)">2</button>
-                    <button class="btn" onclick="press(3)">3</button>
-                    <button class="btn" style="background: #ffb84d" onclick="press('+')">
-                        +
-                    </button>
-                    <br />
-                    <button class="btn" onclick="press(4)">4</button>
-                    <button class="btn" onclick="press(5)">5</button>
-                    <button class="btn" onclick="press(6)">6</button>
-                    <button class="btn" style="background: #ffcc80" onclick="press('-')">
-                        -
-                    </button>
-                    <br />
-                    <button class="btn" onclick="press(7)">7</button>
-                    <button class="btn" onclick="press(8)">8</button>
-                    <button class="btn" onclick="press(9)">9</button>
-                    <button class="btn" style="background: #ffe0b3" onclick="press('*')">
-                        *
-                    </button>
-                    <br />
-                    <button class="btn" onclick="press('.')">.</button>
-                    <button class="btn" onclick="press(0)">0</button>
-                    <button class="btn" onclick="erase()">C</button>
-                    <button class="btn" style="background: #fff5e6" onclick="press('/')">
-                        /
-                    </button>
-                    <br>
-                    <button class="btnEqual" onclick="equal()">=</button>
-                </div>-->
-                <!-- END CALCULATOR -->
-
-                <!-- NOTE PAD -->
-                <!--<div class="notepad__container">
-                    <h1>Notepad</h1>
-                    <textarea id="notepad"></textarea>
-                    <button class="notepad__btn" id="download">Download</button>
-                </div>-->
-
-                <!-- NOTE PAD END -->
                 <div class="tools">
                     <h3>Tools:</h3>
                     <div class="recommendations">
@@ -119,7 +83,7 @@
                             <input type="text" placeholder="Enter Task">
                             <button id="push">Add</button>
                         </div>
-                        <div id="tasks"></div>
+                        <div class="tasks"></div>
                     </div>
                 </div>
                 <div class="todo__container">
@@ -129,17 +93,80 @@
                             <input type="text" placeholder="Enter Deadline">
                             <button id="push_deadline">Add</button>
                         </div>
-                        <div id="deadline"></div>
+                        <div class="deadline_tasks"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="./todo.js"></script>
-    <script src="./deadline.js"></script>
-    <script src="./calc.js"></script>
-    <script src="./notepad.js"></script>
-    <script src="./script.js"></script>
+    <!-- CALCULATOR -->
+    <div class="bottom__container">
+        <div class="calculator dark">
+            <div class="theme-toggler active">
+                <i class="toggler-icon"></i>
+            </div>
+            <div class="display-screen">
+                <div id="display"></div>
+            </div>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td><button class="btn-operator btn-calc" id="clear">C</button></td>
+                        <td><button class="btn-operator btn-calc" id="/">&divide;</button></td>
+                        <td><button class="btn-operator btn-calc" id="*">&times;</button></td>
+                        <td><button class="btn-operator btn-calc" id="backspace">
+                                << </td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number btn-calc" id="7">7</button></td>
+                        <td><button class="btn-number btn-calc" id="8">8</button></td>
+                        <td><button class="btn-number btn-calc" id="9">9</button></td>
+                        <td><button class="btn-operator btn-calc" id="-">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number btn-calc" id="4">4</button></td>
+                        <td><button class="btn-number btn-calc" id="5">5</button></td>
+                        <td><button class="btn-number btn-calc" id="6">6</button></td>
+                        <td><button class="btn-operator btn-calc" id="+">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number btn-calc" id="1">1</button></td>
+                        <td><button class="btn-number btn-calc" id="2">2</button></td>
+                        <td><button class="btn-number btn-calc" id="3">3</button></td>
+                        <td rowspan="2"><button class="btn-equal btn-calc" id="equal">=</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator btn-calc" id="(">(</button></td>
+                        <td><button class="btn-number btn-calc" id="0">0</button></td>
+                        <td><button class="btn-operator btn-calc" id=")">)</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- END CALCULATOR -->
+
+        <!-- NOTE PAD -->
+        <!--<div class="notepad__container">
+                    <h1>Notepad</h1>
+                    <textarea id="notepad"></textarea>
+                    <button class="notepad__btn" id="download">Download</button>
+                </div>-->
+
+        <!-- NOTE PAD END -->
+
+        <!--<iframe style="overflow: hidden; border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/4Zjli1P13J5mmSCD5iKAXK?utm_source=generator" width="99%"
+            height="152" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
+    </div>
+
+
+
+    <script src="./JS/todo.js"></script>
+    <script src="./JS/deadline.js"></script>
+    <script src="./JS/calc.js"></script>
+    <script src="./JS/notepad.js"></script>
+    <script src="./JS/timer.js"></script>
     <script>
         const darkModeBtn = document.getElementById("dark-mode-btn");
 
