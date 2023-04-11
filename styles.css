@@ -1,3 +1,39 @@
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .left__container,
+  .right__container {
+    grid-template-rows: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  nav img {
+    height: 40px;
+  }
+
+  :root {
+    --font-size-l: 24px;
+    --font-size-m: 16px;
+    --font-size-s: 14px;
+    --font-size-xl: 30px;
+    --font-size-xs: 12px;
+    --font-size-xxl: 36px;
+    --font-size-xxxl: 48px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}
+
 * {
   font-family: 'Fredoka', sans-serif;
 }
