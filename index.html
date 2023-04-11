@@ -20,8 +20,9 @@
     <div class="container">
 
         <nav>
-            <div>
+            <div class="logo__div">
                 <img src="./images/FlowMasteryLogo.svg" alt="Logo">
+                <h1>FlowMastery</h1>
             </div>
             <div class="dark-mode__container">
                 <input type="checkbox" id="dark-mode-btn" />
@@ -68,10 +69,9 @@
                 <div class="tools">
                     <h3>Tools:</h3>
                     <div class="recommendations">
-                        <button class="btn__recommendation">Calculator</button>
-                        <button class="btn__recommendation">Notes</button>
-                        <button class="btn__recommendation">+Tools</button>
-                        <button class="btn__recommendation">+Tools</button>
+                        <button class="btn__recommendation" onclick="handleTools('calc')">Calculator</button>
+                        <button class="btn__recommendation" onclick="handleTools('note')">Notes</button>
+                        <!--<button class="btn__recommendation" onclick="handleTools('feedback')">Feedback</button>-->
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                         <h1>Todo List</h1>
                         <div id="newtask">
                             <input type="text" placeholder="Enter Task">
-                            <button id="push">Add</button>
+                            <!--<button id="push">+</button>-->
                         </div>
                         <div class="tasks"></div>
                     </div>
@@ -91,7 +91,7 @@
                         <h1>Deadlines</h1>
                         <div id="new_deadline">
                             <input type="text" placeholder="Enter Deadline">
-                            <button id="push_deadline">Add</button>
+                            <!--<button id="push_deadline">+</button>-->
                         </div>
                         <div class="deadline_tasks"></div>
                     </div>
@@ -101,7 +101,7 @@
     </div>
     <!-- CALCULATOR -->
     <div class="bottom__container">
-        <div class="calculator dark">
+        <div class="calculator dark" id="calc">
             <div class="theme-toggler active">
                 <i class="toggler-icon"></i>
             </div>
@@ -146,11 +146,11 @@
         <!-- END CALCULATOR -->
 
         <!-- NOTE PAD -->
-        <!--<div class="notepad__container">
-                    <h1>Notepad</h1>
-                    <textarea id="notepad"></textarea>
-                    <button class="notepad__btn" id="download">Download</button>
-                </div>-->
+        <div class="notepad__container hidden" id="notes">
+            <h1>Notepad</h1>
+            <textarea id="notepad"></textarea>
+            <button class="notepad__btn" id="download">Download</button>
+        </div>
 
         <!-- NOTE PAD END -->
 
@@ -167,6 +167,8 @@
     <script src="./JS/calc.js"></script>
     <script src="./JS/notepad.js"></script>
     <script src="./JS/timer.js"></script>
+    <script src="./JS/handleTools.js"></script>
+
     <script>
         const darkModeBtn = document.getElementById("dark-mode-btn");
 
@@ -174,6 +176,10 @@
             document.body.classList.toggle("dark-mode");
             darkModeBtn.textContent = document.body.classList.contains("dark-mode") ? "Light mode" : "Dark mode";
         });
+
+
+
+
     </script>
 
 </html>
