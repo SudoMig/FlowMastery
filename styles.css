@@ -136,6 +136,11 @@ nav img {
   color: #00d7ce;
 }
 
+.display__time-left,
+.display__end-time {
+  color: #00d7ce;
+}
+
 #pauseResume {
   background-color: white;
   color: #00d7ce;
