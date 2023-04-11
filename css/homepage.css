@@ -1,0 +1,321 @@
+/* screen - frame-2-timer-0410-version */
+
+.frame-2-timer-0410-version {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  height: 2820px;
+  overflow: hidden;
+  width: 1847px;
+}
+
+.frame-2-timer-0410-version .flex-col {
+  flex-direction: column;
+  margin-left: 60px;
+  margin-top: 38px;
+  min-height: 2637px;
+  width: 1198px;
+}
+
+.frame-2-timer-0410-version .logo {
+  height: 60px;
+  margin-left: 10.5px;
+  width: 376px;
+}
+
+.frame-2-timer-0410-version .overlap-group4 {
+  height: 1119px;
+  margin-top: 94px;
+  position: relative;
+  width: 1198px;
+}
+
+.frame-2-timer-0410-version .group-11 {
+  height: 1119px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1175px;
+}
+
+.frame-2-timer-0410-version .body {
+  background-color: var(--shakespeare);
+  border: 1px solid;
+  border-color: var(--white);
+  border-radius: 100px;
+  height: 24px;
+  left: 968px;
+  position: absolute;
+  top: 49px;
+  width: 40px;
+}
+
+.frame-2-timer-0410-version .handle {
+  background-color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  height: 16px;
+  left: 988px;
+  position: absolute;
+  top: 53px;
+  width: 16px;
+}
+
+.frame-2-timer-0410-version .vector {
+  height: 65px;
+  left: 10px;
+  position: absolute;
+  top: 1035px;
+  width: 1150px;
+}
+
+.frame-2-timer-0410-version .button-container {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  gap: 212px;
+  margin-right: 8.5px;
+  margin-top: 123px;
+  min-width: 1048px;
+}
+
+.frame-2-timer-0410-version .button {
+  align-items: center;
+  background-color: var(--robins-egg-blue);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  height: 90px;
+  justify-content: center;
+  padding: 0px 16px;
+  position: relative;
+  width: 208px;
+}
+
+.frame-2-timer-0410-version .function-card {
+  background-color: var(--white);
+  border: 3px solid;
+  border-color: var(--shakespeare);
+  border-radius: 12px;
+  box-shadow: 2px 6px 8px 3px #00000040;
+  height: 1103px;
+  left: 2px;
+  position: absolute;
+  top: 0;
+  width: 1148px;
+}
+
+.frame-2-timer-0410-version .flex-row {
+  gap: 28px;
+  height: 664px;
+  min-width: 665px;
+}
+
+.frame-2-timer-0410-version .button-1 {
+  align-items: center;
+  background-color: var(--shakespeare);
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px #00000040;
+  cursor: pointer;
+  display: flex;
+  height: 110px;
+  justify-content: center;
+  padding: 0px 16px;
+  position: relative;
+  width: 203px;
+}
+
+.frame-2-timer-0410-version .button-2 {
+  align-items: center;
+  background-color: var(--silver);
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px #00000040;
+  cursor: pointer;
+  display: flex;
+  height: 110px;
+  justify-content: center;
+  padding: 0px 16px;
+  position: relative;
+  width: 203px;
+}
+
+.frame-2-timer-0410-version .flex-col-2 {
+  align-items: flex-end;
+  margin-left: 37px;
+  margin-top: 15px;
+  min-height: 1345px;
+  width: 505px;
+}
+
+.frame-2-timer-0410-version .flex-row-1 {
+  align-items: center;
+  display: flex;
+  gap: 98px;
+  margin-right: 7px;
+  min-width: 416px;
+}
+
+.frame-2-timer-0410-version .light {
+  align-items: center;
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--black);
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px #2b2b2b0d;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  left: 0;
+  padding: 64px;
+  position: absolute;
+  top: 0;
+  width: fit-content;
+}
+
+.frame-2-timer-0410-version .to-do {
+  color: var(--black);
+  font-family: var(--font-family-fredoka);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: 305px;
+}
+
+.frame-2-timer-0410-version .emoji {
+  background-color: var(--titan-white);
+  border: 1px solid;
+  border-color: var(--gray-nurse);
+  border-radius: 12px;
+  height: 56px;
+  min-width: 56px;
+  overflow: hidden;
+  position: relative;
+}
+
+.frame-2-timer-0410-version .text-field {
+  align-items: center;
+  background-color: #f4f4f4;
+  border: 2px solid;
+  border-color: var(--robins-egg-blue);
+  border-radius: 12px;
+  display: flex;
+  gap: 8px;
+  left: 66px;
+  overflow: hidden;
+  padding: 12px 16px;
+  position: absolute;
+  top: 133px;
+  width: 374px;
+}
+
+.frame-2-timer-0410-version .writing-something-to-do {
+  background-color: transparent;
+  border: 0;
+  color: var(--black);
+  flex: 1;
+  font-family: var(--font-family-fredoka);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  min-width: 342px;
+  opacity: 0.5;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.frame-2-timer-0410-version .writing-something-to-do::placeholder {
+  color: #00000099;
+}
+
+.frame-2-timer-0410-version .overlap-group1 {
+  border-radius: 12px;
+  height: 538px;
+  margin-top: 41px;
+  position: relative;
+  width: 505px;
+}
+
+.frame-2-timer-0410-version .light-1 {
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px #2b2b2b0d;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 538px;
+  left: 0;
+  padding: 64px;
+  position: absolute;
+  top: 0;
+  width: fit-content;
+}
+
+.frame-2-timer-0410-version .add-prototype-device-type-1 {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: 343px;
+}
+
+.frame-2-timer-0410-version .text-field-1 {
+  align-items: center;
+  background-color: #f4f4f4;
+  border: 1px solid;
+  border-color: var(--robins-egg-blue);
+  border-radius: 12px;
+  display: flex;
+  gap: 8px;
+  height: 51px;
+  left: 64px;
+  overflow: hidden;
+  padding: 12px 16px;
+  position: absolute;
+  top: 132px;
+  width: 360px;
+}
+
+.frame-2-timer-0410-version .writing-something-to-do-1 {
+  background-color: transparent;
+  border: 0;
+  color: var(--scarpa-flow);
+  flex: 1;
+  font-family: var(--font-family-fredoka);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+  min-width: 328px;
+  opacity: 0.5;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.frame-2-timer-0410-version .writing-something-to-do-1::placeholder {
+  color: #57576799;
+}
+
+.frame-2-timer-0410-version .arrow-1 {
+  height: 1px;
+  margin-left: 6053px;
+  margin-top: 3436px;
+  width: 531px;
+}
