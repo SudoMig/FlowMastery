@@ -1,0 +1,66 @@
+.notepad__container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-secondary);
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.4);
+}
+  
+.notepad__container h1 {
+  text-align: center;
+  color: var(--logo-text)
+}
+
+#notes {
+  margin-top: 100px;
+}
+
+textarea {
+  height: 60vh;
+  width: 50vw;
+  display: grid;
+  place-items: center;
+  margin: 20px;
+  padding: 10px;
+  color: var(--input-text-area);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--text-area);
+  resize: none;
+  font-size: x-large;
+  font-family: "Fredoka", sans-serif;
+}
+
+textarea:focus {
+  color: var(--input-text-area);
+  opacity: 0.95;
+}
+
+.notepad textarea:focus {
+  border: red 1px solid;
+}
+
+.notepad__btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-blue);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.notepad__btn:hover {
+  background-color: #2057e4;
+}
+
+/* Responsive style */
+
+@media screen and (max-width: 768px) {
+  textarea {
+    width: 70vw;
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,14 +11,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Lato&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/timer.css" />
+    <link rel="stylesheet" href="styles/todo.css" />
+    <link rel="stylesheet" href="styles/tools.css" />
+    <link rel="stylesheet" href="styles/calculator.css" />
+    <link rel="stylesheet" href="styles/notepad.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>FlowMastery</title>
 </head>
 
 <body>
     <div class="container">
-
         <nav>
             <div class="logo__div">
                 <img src="./images/FlowMasteryLogo.svg" alt="Logo">
@@ -35,7 +39,6 @@
                 <div>
                     <h1>Welcome back, Einstein.</h1>
                 </div>
-
         </header>
 
         <!--<div id="music-browser">MusicPlayer---The Star-Spangled Banner</div>-->
@@ -65,15 +68,6 @@
                     </div>
                 </div>
                 <!-- END POMO TIMER -->
-
-                <div class="tools">
-                    <h3>Tools:</h3>
-                    <div class="recommendations">
-                        <button class="btn__recommendation" onclick="handleTools('calc')">Calculator</button>
-                        <button class="btn__recommendation" onclick="handleTools('note')">Notes</button>
-                        <!--<button class="btn__recommendation" onclick="handleTools('feedback')">Feedback</button>-->
-                    </div>
-                </div>
             </div>
             <div class="right__container">
                 <div class="todo__container">
@@ -98,13 +92,20 @@
                 </div>
             </div>
         </div>
+        <!-- TOOLS ACTION  -->
+        <div class="tools">
+            <h3>Tools</h3>
+            <div class="recommendations">
+                <button class="btn__recommendation" onclick="handleTools('calc')">Calculator</button>
+                <button class="btn__recommendation" onclick="handleTools('note')">Notes</button>
+                <!--<button class="btn__recommendation" onclick="handleTools('feedback')">Feedback</button>-->
+            </div>
+        </div>
+      
     </div>
     <!-- CALCULATOR -->
     <div class="bottom__container">
         <div class="calculator dark" id="calc">
-            <div class="theme-toggler active">
-                <i class="toggler-icon"></i>
-            </div>
             <div class="display-screen">
                 <div id="display"></div>
             </div>
@@ -168,19 +169,6 @@
     <script src="./JS/notepad.js"></script>
     <script src="./JS/timer.js"></script>
     <script src="./JS/handleTools.js"></script>
+    <script src="./JS/darkMode.js"></script>
     <!--<script src="./JS/weather.js"></script>-->
-
-    <script>
-        const darkModeBtn = document.getElementById("dark-mode-btn");
-
-        darkModeBtn.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            darkModeBtn.textContent = document.body.classList.contains("dark-mode") ? "Light mode" : "Dark mode";
-        });
-
-
-
-
-    </script>
-
 </html>

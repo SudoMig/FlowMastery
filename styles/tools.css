@@ -1,0 +1,37 @@
+/* Tools container */
+.bottom__container {
+    width: 99vw;
+    display: grid;
+    place-items: center;
+    padding-bottom: 40px;
+}
+
+.recommendations {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+    column-gap: 20px;
+}
+  
+.btn__recommendation {
+    width: 96px;
+    height: 42px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #00d7ce;
+    color: white;
+}
+
+.btn__recommendation:hover {
+    opacity: 0.8;
+}
+
+.hidden {
+    display: none;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
