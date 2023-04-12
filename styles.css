@@ -68,7 +68,7 @@
 
 body {
   /*font-family: "Lato", sans-serif;*/
-  background-color: white;
+  background-color: #EEEDFF;
   margin: 0;
   padding: 0;
   /*overflow: hidden;*/
@@ -120,7 +120,7 @@ nav img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #00d7ce;
+  color: #004466;
 }
 
 .btn {
@@ -133,12 +133,12 @@ nav img {
 
 .display__time-left,
 .display__end-time {
-  color: #00d7ce;
+  color: var(--white);
 }
 
 .display__time-left,
 .display__end-time {
-  color: #00d7ce;
+  color: var(--white);
 }
 
 #pauseResume {
@@ -242,6 +242,11 @@ label:active:after {
   box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.4);
 }
 
+.timer__container button:hover {
+  transform: scale(1.1);
+  transition: all 200ms ease;
+}
+
 .timer__functions {
   display: flex;
   flex-direction: column;
@@ -300,7 +305,9 @@ label:active:after {
   border: 2px solid black;
   box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.4);
   padding: 8px;
-
+  background: var(--color-blue);
+  color: var(--color-white);
+  border: var(--robins-egg-blue);
 }
 
 .todo__container h1 {
@@ -346,13 +353,19 @@ label:active:after {
 .task {
   display: flex;
   justify-content: space-between;
-  border-radius: 6px;
   margin-bottom: 3px;
+  margin-left: 8px;
+  margin: 8px 0 3px 8px;
   align-items: center;
-  background: red;
-  ;
+  text-transform: capitalize;
+  font-size: 20px;
+  border-radius: 6px;
+
 }
 
+.delete {
+  margin-right: 8px;
+}
 
 .task button {}
 
@@ -433,9 +446,13 @@ label:active:after {
   text-align: center;
 }
 
+#notes {
+  margin-top: 100px;
+}
+
 textarea {
-  height: 90vh;
-  width: 90vw;
+  height: 60vh;
+  width: 50vw;
   display: grid;
   place-items: center;
   margin-top: 20px;
@@ -445,6 +462,7 @@ textarea {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   resize: none;
   font-size: x-large;
+  font-family: "Fredoka", sans-serif;
 }
 
 .notepad textarea:focus {
@@ -510,7 +528,7 @@ textarea {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background-color: #333;
+  background-color: #000000;
   z-index: -1;
 }
 

@@ -1,5 +1,5 @@
 let counter = 0
-// const localStorageCounter = localStorage.setItem('counter', JSON.stringify(counter))
+
 if (localStorage.getItem('counter')) {
   counter = Number(localStorage.getItem('counter'))
 
@@ -25,28 +25,25 @@ document.querySelector('#newtask input').addEventListener('keypress', function (
 document.querySelector('#push').onclick = addTask
 
 function addTask() {
-  if (document.querySelector('#newtask input').value.length == 0) {
+  const inputField = document.querySelector('#newtask input')
+  const taskName = inputField.value.trim()
+
+  if (taskName.length === 0) {
     alert('Please Enter a Task')
   } else {
     document.querySelector('.tasks').innerHTML += `
-          <div class="task">
-              <p id="taskname">
-                  ${document.querySelector('#newtask input').value}
-              </p>
-              <button class="delete">
-              <i class="fas fa-trash"></i>
-              </button>  
-          </div>
-      `
+      <div class="task">
+        <span id="taskname">${taskName}</span>
+        <button class="delete"><i class="fas fa-trash"></i></button>
+      </div>
+    `
 
-    const todoText = `<div class="task">
-    <span id="taskname">
-    ${document.querySelector('#newtask input').value}
-    </span>
-    <button class="delete">
-    <i class="fas fa-trash"></i>
-    </button>
-    </div>`
+    const todoText = `
+      <div class="task">
+        <span id="taskname">${taskName}</span>
+        <button class="delete"><i class="fas fa-trash"></i></button>
+      </div>
+    `
     counter++
     localStorage.setItem(`task${counter}`, todoText)
     localStorage.setItem('counter', JSON.stringify(counter))
@@ -58,10 +55,11 @@ function addTask() {
         const taskKey = `task${i + 1}`
         console.log(taskKey)
         localStorage.removeItem(taskKey)
+        counter--
         localStorage.setItem('counter', JSON.stringify(counter))
-      }
+      };
     }
 
-    document.querySelector('#newtask input').value = '' // clears the input field after adding the task
+    inputField.value = '' // clears the input field after adding the task
   }
 }

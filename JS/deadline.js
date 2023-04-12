@@ -41,20 +41,20 @@ function addDeadline() {
 
 
 
-let counter = 0
-if (localStorage.getItem('counter')) {
-  counter = Number(localStorage.getItem('counter'))
+//let counter = 0
+//if (localStorage.getItem('counter')) {
+//  counter = Number(localStorage.getItem('counter'))
 
-  for (let i = 0; i < localStorage.length; i++) {
-    if (localStorage.key(i) === 'counter') {
-      continue
-    }
-    const localStorageValue = localStorage.getItem(localStorage.key(i))
-    document.querySelector('.deadline_tasks').innerHTML += localStorageValue
-  }
-} else {
-  counter = 0
-}
+//  for (let i = 0; i < localStorage.length; i++) {
+//    if (localStorage.key(i) === 'counter') {
+//      continue
+//    }
+//    const localStorageValue = localStorage.getItem(localStorage.key(i))
+//    document.querySelector('.deadline_tasks').innerHTML += localStorageValue
+//  }
+//} else {
+//  counter = 0
+//}
 
 
 
