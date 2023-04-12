@@ -16,6 +16,7 @@ h2 {
 .feedback__container label {
     padding: 24px 0 12px 0;
     font-size: large;
+    font-weight: 500;
 }
 
 .feedback__name__email {
@@ -58,7 +59,7 @@ h2 {
 }
 
 .submit:hover {
-    background-color: #2057e4;
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 768px) {
