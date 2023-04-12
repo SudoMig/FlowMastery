@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles/tools.css" />
     <link rel="stylesheet" href="styles/calculator.css" />
     <link rel="stylesheet" href="styles/notepad.css" />
+    <link rel="stylesheet" href="styles/feedback.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>FlowMastery</title>
 </head>
@@ -39,6 +40,9 @@
                 <div>
                     <h1>Welcome back, Einstein.</h1>
                 </div>
+                <div id="weather-widget">
+                    <h4 class="temp"></h4>
+                </div>
         </header>
 
         <!--<div id="music-browser">MusicPlayer---The Star-Spangled Banner</div>-->
@@ -48,9 +52,9 @@
                 <div class="timer__container">
                     <div class="timer__functions">
                         <div>
-                            <button class="btn__timer" data-time="1500">Pomodoro</button>
-                            <button class="btn__timer" data-time="300">Rest</button>
-                            <button class="btn__timer" data-time="1800">Long Rest</button>
+                            <button class="btn__timer" id="timer25">Pomodoro</button>
+                            <button class="btn__timer" id="timer5">Rest</button>
+                            <button class="btn__timer" id="timer60">Long Rest</button>
                         </div>
                         <div>
                             <form name="customForm" id="custom">
@@ -58,13 +62,16 @@
                             </form>
                         </div>
                         <div id="timer-display" class="display">
-                            <h1 class="display__time-left"></h1>
-                            <p class="display__end-time"></p>
+                            <p id="w_minutes">25</p>
+                            <p class="semicolon">:</p>
+                            <p id="w_seconds">00</p>
+
                         </div>
                     </div>
                     <div class="timer-controls">
-                        <button id="pauseResume" class="btn__timer">Pause</button>
-                        <button class="btn__timer">Restart</button>
+                        <button id="pause" class="btn__timer">Start</button>
+                        <button id="resume" class="btn__timer">Pause</button>
+                        <button id="reset" class="btn__timer">Reset</button>
                     </div>
                 </div>
                 <!-- END POMO TIMER -->
@@ -94,14 +101,14 @@
         </div>
         <!-- TOOLS ACTION  -->
         <div class="tools">
-            <h3>Tools</h3>
+            <h1>Tools</h1>
             <div class="recommendations">
                 <button class="btn__recommendation" onclick="handleTools('calc')">Calculator</button>
-                <button class="btn__recommendation" onclick="handleTools('note')">Notes</button>
-                <!--<button class="btn__recommendation" onclick="handleTools('feedback')">Feedback</button>-->
+                <button class="btn__recommendation" onclick="handleTools('notes')">Notes</button>
+                <button class="btn__recommendation" onclick="handleTools('feedback')">Feedback</button>
             </div>
         </div>
-      
+
     </div>
     <!-- CALCULATOR -->
     <div class="bottom__container">
@@ -155,6 +162,29 @@
 
         <!-- NOTE PAD END -->
 
+        <!-- Feedback -->
+        <div class="feedback__container hidden" id="feedback">
+            <h1>Feedback</h1>
+            <h2>Help us improve</h2>
+            <form action="./thankyou.html" id="form">
+                <div class="feedback__name__email">
+                    <div class="input__col">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input__col">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <label for="message" class="msg_label">Message:</label><br>
+                <textarea id="message" name="message"></textarea>
+                <input type="submit" value="Submit" class="submit">
+            </form>
+        </div>
+
+        <!-- Feedback END -->
+
         <!--<iframe style="overflow: hidden; border-radius:12px"
             src="https://open.spotify.com/embed/playlist/4Zjli1P13J5mmSCD5iKAXK?utm_source=generator" width="99%"
             height="152" frameBorder="0" allowfullscreen=""
@@ -170,5 +200,6 @@
     <script src="./JS/timer.js"></script>
     <script src="./JS/handleTools.js"></script>
     <script src="./JS/darkMode.js"></script>
-    <!--<script src="./JS/weather.js"></script>-->
+    <script src="./JS/weather.js"></script>
+
 </html>

@@ -1,112 +1,88 @@
-let countdown
-const timerDisplay = document.querySelector('.display__time-left')
-const endTime = document.querySelector('.display__end-time')
-const buttons = document.querySelectorAll('[data-time]')
+const start = document.getElementById('pause')
+const stop = document.getElementById('resume')
+const reset = document.getElementById('reset')
 
-function timer(seconds) {
-    // clear any existing timers
-    clearInterval(countdown)
+const wm = document.getElementById('w_minutes')
+const ws = document.getElementById('w_seconds')
 
-    const now = Date.now()
-    const then = now + seconds * 1000
-    displayTimeLeft(seconds)
-    displayEndTime(then)
+// store a reference to a timer variable
+let startTimer
 
-    countdown = setInterval(() => {
-        const secondsLeft = Math.round((then - Date.now()) / 1000)
-        // check if we should stop it!
-        if (secondsLeft < 0) {
-            clearInterval(countdown)
-            return
-        }
-        // display it
-        displayTimeLeft(secondsLeft)
-    }, 1000)
-}
+const timer25 = document.getElementById('timer25')
+const timer5 = document.getElementById('timer5')
+const timer60 = document.getElementById('timer60')
 
-function displayTimeLeft(seconds) {
-    const minutes = Math.floor(seconds / 60)
-    const remainderSeconds = seconds % 60
-    const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''
-        }${remainderSeconds}`
-    document.title = display
-    timerDisplay.textContent = display
-}
-
-function displayEndTime(timestamp) {
-    const end = new Date(timestamp)
-    const hour = end.getHours()
-    const adjustedHour = hour > 12 ? hour - 12 : hour
-    const minutes = end.getMinutes()
-    endTime.textContent = `Timer Ends: ${adjustedHour}:${minutes < 10 ? '0' : ''
-        }${minutes}`
-}
-
-function startTimer() {
-    const seconds = parseInt(this.dataset.time)
-    timer(seconds)
-}
-
-buttons.forEach((button) => button.addEventListener('click', startTimer))
-document.customForm.addEventListener('submit', function (e) {
-    e.preventDefault()
-    const mins = this.minutes.value
-    console.log(mins)
-    timer(mins * 60)
-    this.reset()
+timer25.addEventListener('click', function () {
+  wm.innerText = 25
+  ws.innerText = '00'
+  stopInterval()
+  startTimer = undefined
 })
-// const pauseButton = document.querySelector("#pause");
-// pauseButton.addEventListener("click", pauseTimer);
 
-// function pauseTimer() {
-//   clearInterval(countdown);
-// }
-// let timeLeft;
-// const resumeButton = document.querySelector("#resume");
-// resumeButton.addEventListener("click", resumeTimer);
+timer5.addEventListener('click', function () {
+  wm.innerText = 5
+  ws.innerText = '00'
 
-// function pauseTimer() {
-//   clearInterval(countdown);
-//   timeLeft = Math.round((then - Date.now()) / 1000);
-// }
+  stopInterval()
+  startTimer = undefined
+})
 
-// function resumeTimer() {
-//   timer(timeLeft);
-// }
+timer60.addEventListener('click', function () {
+  wm.innerText = 60
+  ws.innerText = '00'
+  stopInterval()
+  startTimer = undefined
+})
 
-let timeLeft
-let isPaused = false
-const pauseResumeButton = document.querySelector('#pauseResume')
-pauseResumeButton.addEventListener('click', toggleTimer)
+start.addEventListener('click', function () {
+  if (startTimer === undefined) {
+    startTimer = setInterval(timer, 1000)
+  } else {
+    alert('Timer is already running')
+  }
+})
 
-function toggleTimer() {
-    if (isPaused) {
-        resumeTimer()
-    } else {
-        pauseTimer()
-    }
+reset.addEventListener('click', function () {
+  wm.innerText = 25
+  ws.innerText = '00'
+  document.getElementById('counter').innerText = 0
+  stopInterval()
+  startTimer = undefined
+})
+
+document.customForm.addEventListener('submit', function (e) {
+  e.preventDefault()
+  wm.innerText = this.minutes.value
+  ws.innerText = '00'
+  stopInterval()
+  startTimer = undefined
+  this.reset()
+})
+
+stop.addEventListener('click', function () {
+  stopInterval()
+  startTimer = undefined
+})
+
+// Start Timer Function
+function timer() {
+  // Work Timer Countdown
+  if (ws.innerText != 0) {
+    ws.innerText--
+  } else if (wm.innerText != 0 && ws.innerText == 0) {
+    ws.innerText = 59
+    wm.innerText--
+  }
+
+  // Increment Counter by one if one full cycle is completed
+  if (wm.innerText == 0 && ws.innerText == 0) {
+    wm.innerText = 25
+    ws.innerText = '00'
+    document.getElementById('counter').innerText++
+  }
 }
 
-function pauseTimer() {
-    clearInterval(countdown)
-    timeLeft = Math.round((then - Date.now()) / 1000)
-    isPaused = true
-}
-
-function resumeTimer() {
-    const now = Date.now()
-    const then = now + timeLeft * 1000
-    displayTimeLeft(timeLeft)
-    displayEndTime(then)
-
-    countdown = setInterval(() => {
-        const secondsLeft = Math.round((then - Date.now()) / 1000)
-        if (secondsLeft < 0) {
-            clearInterval(countdown)
-            return
-        }
-        displayTimeLeft(secondsLeft)
-    }, 1000)
-
-    isPaused = false
+// Stop Timer Function
+function stopInterval() {
+  clearInterval(startTimer)
 }

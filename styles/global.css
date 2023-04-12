@@ -71,7 +71,8 @@ body {
   overflow-x: hidden;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   background-color: var(--input);
   color: var(--input-text);
   height: 12px;
@@ -137,7 +138,8 @@ nav img {
 }
 
 #weather-widget {
-  font-size: 1.2rem;
+  color: --header-text;
+  font-size: 1.8rem;
 }
 
 #music-browser {
@@ -183,12 +185,12 @@ nav img {
   border: 2px solid #00d7ce;
 }
 
-h3 {
-  color: #00d7ce;
+.tools {
+  color: var(--header-text);
 }
 
 /* =============== DARK MODE =============== */
-label {
+.dark-mode__container label {
   width: 56px;
   height: 32px;
   position: relative;
@@ -201,7 +203,7 @@ label {
   transition: 0.3s;
 }
 
-label:after {
+.dark-mode__container label:after {
   content: '';
   width: 24px;
   height: 24px;
@@ -232,7 +234,7 @@ input:checked+label:after {
   background: linear-gradient(180degm #777, #3a3a3a);
 }
 
-label:active:after {
+.dark-mode__container label:active:after {
   width: 36px;
 }
 

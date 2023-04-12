@@ -5,7 +5,7 @@
   border-radius: 12px;
   box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.4);
 }
-  
+
 .notepad__container h1 {
   text-align: center;
   color: var(--logo-text)
@@ -50,6 +50,7 @@ textarea:focus {
   background-color: var(--color-blue);
   color: #fff;
   font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
 }
 
