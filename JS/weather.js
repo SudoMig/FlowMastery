@@ -11,7 +11,7 @@ const weather = {
   displayWeather: function (data) {
     const { temp } = data.main
     // console.log(temp);
-    document.querySelector('.temp').innerText = temp + '°C'
+    document.querySelector('.temp').innerText = 'Ottawa: ' + temp + '°C'
   }
 }
 weather.fetchweather()
