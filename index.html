@@ -37,7 +37,7 @@
         </nav>
         <header>
             <div class="header">
-                <div>
+                <div id="header">
                     <h1>Welcome back, Einstein.</h1>
                 </div>
                 <div id="weather-widget">
@@ -201,5 +201,12 @@
     <script src="./JS/handleTools.js"></script>
     <script src="./JS/darkMode.js"></script>
     <script src="./JS/weather.js"></script>
+    <script>
+        const username = localStorage.getItem("username");
+        if (username) {
+            const welcomeText = document.querySelector(".header h1");
+            welcomeText.textContent = `Welcome back, ${username}.`;
+        }
+    </script>
 
 </html>

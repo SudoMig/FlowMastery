@@ -1,0 +1,72 @@
+.lp-logo {
+  height: 50px;
+  display: block;
+  top: 100px;
+  margin: auto;
+}
+
+.banner {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.top-banner {
+  background: no-repeat center center;
+  width: 100%;
+  display: block;
+  margin: auto;
+  top: 0;
+}
+
+.bottom-author {
+  display: block;
+  margin: auto;
+}
+.bottom-banner {
+  width: 100%;
+  display: block;
+  bottom: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 200px);
+}
+
+.welcome {
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: gray;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2057e4;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
